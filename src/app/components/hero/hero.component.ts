@@ -20,20 +20,34 @@ import { IconsComponent } from '../../shared/icons.component';
             <a href="https://linkedin.com/in/pmahendra" target="_blank" rel="noopener noreferrer"><app-icon name="linkedin" /> LinkedIn</a>
           </div>
         </div>
-        <div class="code-visual card" aria-label="Technical focus">
-          <div class="code-bar"><span></span><span></span><span></span><small>mahendra.engineer</small></div>
-          <div class="code-body" aria-hidden="true">
-            <p><b>01</b><span class="violet">public class</span> <span class="green">Engineer</span></p>
-            <p><b>02</b>{{ '{' }}</p>
-            <p><b>03</b>&nbsp;&nbsp;<span class="blue">focus</span>: [</p>
-            <p><b>04</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">".NET Core"</span>,</p>
-            <p><b>05</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">"Angular"</span>,</p>
-            <p><b>06</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">"Azure"</span></p>
-            <p><b>07</b>&nbsp;&nbsp;];</p>
-            <p><b>08</b>&nbsp;&nbsp;<span class="blue">architecture</span>: <span class="amber">"multi-tenant"</span>;</p>
-            <p><b>09</b>{{ '}' }}</p>
+        <div class="code-visual card" aria-label="Architecture">
+          <div class="code-bar">
+            <span></span><span></span><span></span>
+            <small>mahendra.engineer</small>
           </div>
-          <div class="system-line"><span></span><p>Systems online</p><i></i><small>Scalable · Cloud-native</small></div>
+
+          <div class="code-body" aria-hidden="true">
+            <p><b>01</b><span class="violet">public class</span> <span class="green">&nbsp;SeniorEngineer</span></p>
+            <p><b>02</b>{{ '{' }}</p>
+            <p><b>03</b>&nbsp;&nbsp;<span class="violet">public string[]</span> <span class="blue">&nbsp;Stack</span> = {{ '{' }}</p>
+            <p><b>04</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">".NET Core"</span>,</p>
+            <p><b>05</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">"Azure"</span>,</p>
+            <p><b>06</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">"SQL Server"</span>,</p>
+            <p><b>07</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">"Angular"</span></p>
+            <p><b>08</b>&nbsp;&nbsp;{{ '}' }};</p>
+            <p><b>09</b>&nbsp;&nbsp;<span class="violet">public string[]</span> <span class="blue">&nbsp;Architecture</span> = {{ '{' }}</p>
+            <p><b>10</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">"Clean Architecture"</span>,</p>
+            <p><b>11</b>&nbsp;&nbsp;&nbsp;&nbsp;<span class="amber">"Multi-Tenant Architecture"</span></p>
+            <p><b>12</b>&nbsp;&nbsp;{{ '}' }};</p>
+            <p><b>13</b>{{ '}' }}</p>
+          </div>
+
+          <div class="system-line">
+            <span></span>
+            <p>Systems online</p>
+            <i></i>
+            <small>Scalable · Cloud-native</small>
+          </div>
         </div>
       </div>
       <a class="scroll-cue" href="#about" aria-label="Scroll to about section"><span></span> Scroll to discover</a>

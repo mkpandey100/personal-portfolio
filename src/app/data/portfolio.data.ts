@@ -24,7 +24,7 @@ export const EXPERIENCES: readonly Experience[] = [
       'Led code reviews, refactoring, and best-practice adoption across the development workflow.',
       'Translated business requirements into scalable technical solutions with cross-functional teams.',
     ],
-    technologies: ['.NET Core', 'Angular', 'Azure', 'SignalR', 'REST APIs'],
+    technologies: ['.NET Core', 'Angular', 'Azure', 'SQL Server', 'SignalR', 'REST APIs'],
   },
   {
     company: 'Insight Workshop', role: 'Software Engineer', period: 'May 2018 — Sep 2020',
@@ -34,7 +34,7 @@ export const EXPERIENCES: readonly Experience[] = [
       'Worked across requirements, development, debugging, and performance optimization.',
       'Refactored modules for scalability and maintainability and implemented unit testing.',
     ],
-    technologies: ['.NET Core', 'Angular', 'Microsoft Azure', 'Unit Testing'],
+    technologies: ['.NET Core', 'Angular', 'SQL Server', 'Microsoft Azure', 'Unit Testing'],
   },
   {
     company: 'GAPSCO', role: 'ASP.NET Developer', period: 'Jun 2017 — Mar 2018',
