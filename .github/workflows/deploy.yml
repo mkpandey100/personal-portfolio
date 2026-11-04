@@ -3,6 +3,7 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches: [ master ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,29 +17,40 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
+          node-version: 22
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Build project
-        run: pnpm build --configuration production
+        run: pnpm install --frozen-lockfile=false
 
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v4
+
+      - name: Build project
+        run: pnpm run build -- --configuration production --base-href "${{ steps.pages.outputs.base_path }}/"
+
+      - name: Prepare build output
+        id: build_output
+        run: |
+          INDEX_FILE=$(find dist -name "index.html" | head -n 1)
+          BUILD_DIR=$(dirname "$INDEX_FILE")
+          cp "$BUILD_DIR/index.html" "$BUILD_DIR/404.html"
+          echo "dir=$BUILD_DIR" >> $GITHUB_OUTPUT
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/'
+          path: ${{ steps.build_output.outputs.dir }}
 
   deploy:
     needs: build
