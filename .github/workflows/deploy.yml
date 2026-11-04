@@ -37,7 +37,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build project
-        run: pnpm run build -- --configuration production --base-href "${{ steps.pages.outputs.base_path }}/"
+        run: pnpm run build --configuration production --base-href "${{ steps.pages.outputs.base_path }}/"
 
       - name: Prepare build output
         id: build_output
